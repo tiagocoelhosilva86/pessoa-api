@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "89798d7f-c945-4f40-9213-eff9230a318e",
+		"name": "homework2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CONTATO",
+			"item": [
+				{
+					"name": "GET / CONTATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contatoentity/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoentity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET / CONTATO/NUMBER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/contatoentity/1",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contatoentity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST / CONTATO/ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"idPessoa\": 1,\r\n        \"tipoContato\": \"COMERCIAL\",\r\n        \"numero\": \"51999552742\",\r\n        \"descricao\": \"whatsapp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/contatoentity/1",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contatoentity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT / CONTATO /id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idContato\": 6,\r\n        \"idPessoa\": 1,\r\n        \"tipoContato\": \"COMERCIAL\",\r\n        \"numero\": \"51999552742\",\r\n        \"descricao\": \"Telegram\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/contatoentity/1",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contatoentity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE / contatoentity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/contatoentity/1",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"contatoentity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PESSOA",
+			"item": [
+				{
+					"name": "GET /pessoaentity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pessoaentity/byname?nome=maicon",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pessoaentity",
+								"byname"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "maicon"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /pessoaentity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Brunno Zonatto\",\r\n    \"dataNascimento\": \"1992-06-30\",\r\n    \"cpf\": \"12345678910\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/pessoaentity",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoaentity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /pessoaentity/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maicon Gerardi\",\r\n    \"dataNascimento\": \"1991-09-08\",\r\n    \"cpf\": \"12345678910\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/pessoaentity/1",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoaentity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /pessoaentity/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://my-application-teste.herokuapp.com/pessoaentity/2",
+							"protocol": "https",
+							"host": [
+								"my-application-teste",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"pessoaentity",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
